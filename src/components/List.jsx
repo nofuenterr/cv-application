@@ -1,0 +1,51 @@
+import Item from "./Item"
+import InputWrapper from "./InputWrapper";
+import EducationInputs from "./EducationInputs"
+import ExperienceInputs from "./ExperienceInputs";
+
+function List({ 
+    section, 
+    list, 
+    onChange, 
+    deleteItem, 
+    handleActiveID, 
+    activeID, 
+  }) {
+
+  return (
+    <ul>
+      {list.map((item, index) => {
+        return (
+          <Item 
+            key={item.id}
+            section={section}
+            item={item}
+            deleteItem={deleteItem}
+            onClick={handleActiveID}
+            active={item.id === activeID}
+          >
+            <InputWrapper>
+              {
+                section === "education"
+                ? <EducationInputs
+                    item={item}
+                    index={index}
+                    onChange={onChange}
+                  />
+                : section === "experience"
+                  ? <ExperienceInputs
+                      item={item}
+                      index={index}
+                      onChange={onChange}
+                    />
+                  : null
+              }
+            </InputWrapper>
+          </Item>
+        )
+      })}
+    </ul>
+  )
+}
+
+export default List
