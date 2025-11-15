@@ -1,3 +1,5 @@
+import '../styles/Item.css'
+
 function getHeader(section, item) {
   let title1
   let title2
@@ -49,9 +51,9 @@ function Item({ section, item, deleteItem, onClick, active, children }) {
   const [itemTitle, itemDate] = getHeader(section, item)
 
   return (
-    <li>
-      <div>
-        <div onClick={() => onClick(item.id)}>
+    <li className="item">
+      <div className="item-header" onClick={() => onClick(item.id)}>
+        <div>
           <p>{itemTitle}</p>
           <p>{itemDate}</p>
         </div>

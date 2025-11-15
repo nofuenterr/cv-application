@@ -1,0 +1,14 @@
+.item {
+  display: grid;
+  gap: var(--space-4);
+  border: 1px solid var(--neutral-700);
+  border-radius: 0.5rem;
+  padding: var(--space-6);
+}
+
+.item-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}

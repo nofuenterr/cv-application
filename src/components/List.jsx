@@ -2,6 +2,7 @@ import Item from "./Item"
 import InputWrapper from "./InputWrapper";
 import EducationInputs from "./EducationInputs"
 import ExperienceInputs from "./ExperienceInputs";
+import '../styles/List.css'
 
 function List({ 
     section, 
@@ -13,7 +14,7 @@ function List({
   }) {
 
   return (
-    <ul>
+    <ul className="list">
       {list.map((item, index) => {
         return (
           <Item 

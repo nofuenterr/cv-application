@@ -1,3 +1,5 @@
+import '../styles/InputWrapper.css'
+
 function InputWrapper({ children }) {
   return (
     <div className="input-wrapper">

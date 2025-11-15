@@ -1,7 +1,9 @@
+import '../styles/Section.css'
+
 function Section({ headline, description, children}) {
   return (
     <section>
-      <div>
+      <div className='section-header'>
         <h2>{headline}</h2>
         <p>{description}</p>
       </div>

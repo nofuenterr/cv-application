@@ -3,6 +3,7 @@ import InputWrapper from "./InputWrapper"
 import Section from "./Section"
 import AddItem from "./AddItem"
 import List from "./List"
+import '../styles/CreateCV.css'
 
 function CreateCV({ 
     handleContacts, 
@@ -20,7 +21,7 @@ function CreateCV({
     activeExperienceID, 
   }) {
   return (
-    <div>
+    <div className="create-cv">
       <Section
         headline="Contacts"
         description="Add your up-to-date contact information so employers and recruiters can easily reach you."

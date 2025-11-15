@@ -1,0 +1,5 @@
+.create-cv {
+  display: grid;
+  gap: var(--space-10);
+  padding: var(--space-12);
+}

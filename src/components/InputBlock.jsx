@@ -1,3 +1,5 @@
+import '../styles/InputBlock.css'
+
 function InputBlock({ 
     label, 
     inputID, 

@@ -1,6 +1,6 @@
 import CreateCV from './CreateCV'
 import PreviewCV from './PreviewCV'
-import '../styles/App.css'
+/* import '../styles/App.css' */
 import { useState } from 'react'
 
 const contactDetails = {

@@ -1,0 +1,13 @@
+section {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background-color: var(--neutral-0);
+  color: var(--neutral-1100);
+  border-radius: 1rem;
+}
+
+.section-header {
+  display: grid;
+  gap: var(--space-2);
+}
