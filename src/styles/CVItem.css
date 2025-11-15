@@ -1,0 +1,9 @@
+.cv-item {
+  font-size: 2.35294cqi;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.item--bold {
+  font-weight: var(--fw-bold);
+}

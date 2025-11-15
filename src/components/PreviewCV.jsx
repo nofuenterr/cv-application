@@ -1,46 +1,26 @@
+import '../styles/PreviewCV.css'
+import CVSection from './CVSection'
+
 function PreviewCV({ contacts, educationList, experienceList }) {
+  /* const desiredJobTitle = contacts.desiredJobTitle */
+  let email = contacts.email
+  let phone = contacts.phone
+  let address = contacts.address
   const fullName = contacts.fullName
-  const desiredJobTitle = contacts.desiredJobTitle
-  const phone = contacts.phone
-  const email = contacts.email
-  const address = contacts.address
+  email = email && (phone || address) ? email + ' | ' : email
+  phone = phone && address ? phone + ' | ' : phone
 
   return (
-    <div>
-      <div>
-        <p>{fullName}</p>
-        <p>{desiredJobTitle}</p>
-        <p>{phone}</p>
-        <p>{email}</p>
-        <p>{address}</p>
-      </div>
-      <div>
-        <ul>
-          {educationList.map(item => {
-            return (
-              <li key={item.id}> 
-                <p>{"School Name: " + item.schoolName}</p>
-                <p>{"Location: " + item.location}</p>
-                <p>{"Degree: " + item.degree}</p>
-                <p>{"Start Date: " + item.startDate}</p>
-                <p>{"End Date: " + item.endDate}</p>
-              </li>
-            )
-          })}
-        </ul>
-        <ul>
-          {experienceList.map(item => {
-            return (
-              <li key={item.id}> 
-                <p>{"Job title: " + item.jobTitle}</p>
-                <p>{"Employer: " + item.employer}</p>
-                <p>{"Location: " + item.location}</p>
-                <p>{"Start Date: " + item.startDate}</p>
-                <p>{"End Date: " + item.endDate}</p>
-              </li>
-            )
-          })}
-        </ul>
+    <div className="preview-cv">
+      <div className="cv">
+        <div className='cv-header'>
+          <p className='name'>{fullName}</p>
+          <p className='info'>{email + phone + address}</p>
+        </div>
+        <div className='cv-body'>
+          <CVSection headerText="Education" list={educationList} />
+          <CVSection headerText="Experience" list={experienceList} />
+        </div>
       </div>
     </div>
   )
