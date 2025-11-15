@@ -12,40 +12,52 @@ function List({
     handleActiveID, 
     activeID, 
   }) {
+  
+  const isListEmpty = list.length < 1
 
-  return (
-    <ul className="list">
-      {list.map((item, index) => {
-        return (
-          <Item 
-            key={item.id}
-            section={section}
-            item={item}
-            deleteItem={deleteItem}
-            onClick={handleActiveID}
-            active={item.id === activeID}
-          >
-            <InputWrapper>
-              {
-                section === "education"
-                ? <EducationInputs
-                    item={item}
-                    index={index}
-                    onChange={onChange}
-                  />
-                : section === "experience"
-                  ? <ExperienceInputs
+  function getNonEmptyList(isListEmpty) {
+    if (!isListEmpty) {
+      return <ul className="list">
+        {list.map((item, index) => {
+          return (
+            <Item 
+              key={item.id}
+              section={section}
+              item={item}
+              deleteItem={deleteItem}
+              onClick={handleActiveID}
+              active={item.id === activeID}
+            >
+              <InputWrapper>
+                {
+                  section === "education"
+                  ? <EducationInputs
                       item={item}
                       index={index}
                       onChange={onChange}
                     />
-                  : null
-              }
-            </InputWrapper>
-          </Item>
-        )
-      })}
-    </ul>
+                  : section === "experience"
+                    ? <ExperienceInputs
+                        item={item}
+                        index={index}
+                        onChange={onChange}
+                      />
+                    : null
+                }
+              </InputWrapper>
+            </Item>
+          )
+        })}
+      </ul>
+    } else {
+      return null
+    }
+  }
+
+  return (
+    <>
+      {getNonEmptyList(isListEmpty)}
+    </>
   )
 }
 
