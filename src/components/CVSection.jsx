@@ -10,7 +10,7 @@ function getCVSection(list, headerText) {
     <div className='cv-section'>
       <p className='cv-section-header'>{headerText}</p>
       <ul className='cv-list'>
-        {list.map(item => <CVItem item={item} />)}
+        {list.map(item => <CVItem key={item.id} item={item} />)}
       </ul>  
     </div>
   )
