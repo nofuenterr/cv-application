@@ -6,13 +6,21 @@
   padding: var(--space-6);
 }
 
-.item-header{
+.item-header {
   display: flex;
   align-items: center;
   gap: var(--space-2);
   cursor: pointer;
 }
 
+.item-header:hover > *:not(.placeholder) {
+  color: var(--blue-600);
+}
+
 .header-text {
   margin-right: auto;
+}
+
+.header-text.placeholder {
+  color: var(--neutral-700);
 }

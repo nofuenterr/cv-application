@@ -52,11 +52,12 @@ function getHeader(section, item) {
 
 function Item({ section, item, deleteItem, onClick, active, children }) {
   const [itemTitle, itemDate] = getHeader(section, item)
+  const isPlaceholder = itemTitle && itemDate
 
   return (
     <li className="item">
       <div className="item-header" onClick={() => onClick(item.id)}>
-        <div className='header-text'>
+        <div className={'header-text' + (isPlaceholder ? ' placeholder' : '')}>
           <p>{itemTitle}</p>
           <p>{itemDate}</p>
         </div>

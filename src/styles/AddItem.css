@@ -5,3 +5,7 @@
   color: var(--blue-700);
   cursor: pointer;
 }
+
+.add-item:hover {
+  color: var(--blue-800);
+}
