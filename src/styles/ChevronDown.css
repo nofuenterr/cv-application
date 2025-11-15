@@ -1,0 +1,8 @@
+.chevron-down-wrapper {
+  padding: 0.125rem;
+  transition: all 100ms;
+}
+
+.chevron-down-wrapper:not(.active) {
+  transform: rotate(180deg);
+}

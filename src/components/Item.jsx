@@ -1,6 +1,7 @@
+import ChevronDown from '../assets/ChevronDown.jsx'
+import DeleteItem from './DeleteItem.jsx'
 import '../assets/DeleteIcon.jsx'
 import '../styles/Item.css'
-import DeleteItem from './DeleteItem.jsx'
 
 function getHeader(section, item) {
   let title1
@@ -55,10 +56,13 @@ function Item({ section, item, deleteItem, onClick, active, children }) {
   return (
     <li className="item">
       <div className="item-header" onClick={() => onClick(item.id)}>
-        <div>
+        <div className='header-text'>
           <p>{itemTitle}</p>
           <p>{itemDate}</p>
         </div>
+        <ChevronDown 
+          active={active}
+        />
         <DeleteItem 
           onClick={deleteItem}
           itemID={item.id}
