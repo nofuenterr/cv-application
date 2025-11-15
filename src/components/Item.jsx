@@ -51,7 +51,7 @@ function getHeader(section, item) {
 
 function Item({ section, item, deleteItem, onClick, active, children }) {
   const [itemTitle, itemDate] = getHeader(section, item)
-  const isPlaceholder = itemTitle && itemDate
+  const isPlaceholder = !!itemTitle && !!itemDate
 
   return (
     <li className="item">
