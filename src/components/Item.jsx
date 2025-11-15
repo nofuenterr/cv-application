@@ -34,7 +34,6 @@ function getHeader(section, item) {
       itemDate = "MM/YYYY - MM/YYYY"
     }
   } else {
-    console.log(title1)
     if (title1 && title2) {
       itemTitle = title1 + ', ' + title2
     } else {
