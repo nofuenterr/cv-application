@@ -9,4 +9,5 @@
   background-color: var(--neutral-200);
   color: var(--neutral-900);
   border: 1px solid var(--neutral-500);
+  min-width: 8.125rem;
 }

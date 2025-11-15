@@ -2,3 +2,59 @@
   display: grid;
   gap: var(--space-4);
 }
+
+:not(.item) .input-wrapper {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'one one'
+  'two two'
+  'three four'
+  'five five';
+}
+
+:not(.item) .input-wrapper > *:nth-child(1) {
+  grid-area: one;
+}
+
+:not(.item) .input-wrapper > *:nth-child(2) {
+  grid-area: two;
+}
+
+:not(.item) .input-wrapper > *:nth-child(3) {
+  grid-area: three;
+}
+
+:not(.item) .input-wrapper > *:nth-child(4) {
+  grid-area: four;
+}
+
+:not(.item) .input-wrapper > *:nth-child(5) {
+  grid-area: five;
+}
+
+.item .input-wrapper {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  'one one two two'
+  'three three four five';
+}
+
+.item .input-wrapper > *:nth-child(1) {
+  grid-area: one;
+}
+
+.item .input-wrapper > *:nth-child(2) {
+  grid-area: two;
+}
+
+.item .input-wrapper > *:nth-child(3) {
+  grid-area: three;
+}
+
+.item .input-wrapper > *:nth-child(4) {
+  grid-area: four;
+}
+
+.item .input-wrapper > *:nth-child(5) {
+  grid-area: five;
+}
