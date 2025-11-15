@@ -1,7 +1,6 @@
 import '../styles/CVItem.css'
 
 function CVItem({ item }) {
-  console.log(item)
   let date
   if (item.startDate && item.endDate ) {
     date = item.startDate + ' - ' + item.startDate
