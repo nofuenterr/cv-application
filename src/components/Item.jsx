@@ -1,4 +1,6 @@
+import '../assets/DeleteIcon.jsx'
 import '../styles/Item.css'
+import DeleteItem from './DeleteItem.jsx'
 
 function getHeader(section, item) {
   let title1
@@ -57,9 +59,10 @@ function Item({ section, item, deleteItem, onClick, active, children }) {
           <p>{itemTitle}</p>
           <p>{itemDate}</p>
         </div>
-        <button onClick={() => deleteItem(item.id)}>
-          Delete
-        </button>
+        <DeleteItem 
+          onClick={deleteItem}
+          itemID={item.id}
+        />
       </div>
       {active ? children : null}
     </li>
