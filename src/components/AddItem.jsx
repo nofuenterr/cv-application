@@ -1,6 +1,8 @@
+import '../styles/AddItem.css'
+
 function AddItem({ onClick, buttonText }) {
   return (
-    <button onClick={onClick}>
+    <button className="add-item" onClick={onClick}>
       {buttonText}
     </button>
   )

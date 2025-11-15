@@ -47,7 +47,7 @@ function CreateCV({
         />
         <AddItem
           onClick={addEducation}
-          buttonText="Add education"
+          buttonText="+ Add education"
         />
       </Section>
 
@@ -65,7 +65,7 @@ function CreateCV({
         />
         <AddItem
           onClick={addExperience}
-          buttonText="Add experience"
+          buttonText="+ Add experience"
         />
       </Section>
     </div>

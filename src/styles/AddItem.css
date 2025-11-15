@@ -1,0 +1,7 @@
+.add-item {
+  justify-self: start;
+  border: none;
+  background-color: transparent;
+  color: var(--blue-700);
+  cursor: pointer;
+}
