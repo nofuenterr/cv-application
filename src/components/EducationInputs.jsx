@@ -7,7 +7,7 @@ function EducationInputs({ item, index, onChange }) {
         label="School name"
         inputID={"schoolName_" + index}
         inputName={"schoolName_" + index}
-        dataInputID="schoolName"
+        dataKey="schoolName"
         dataItemID={item.id}
         inputType="text"
         placeholder="Backlund University"
@@ -19,7 +19,7 @@ function EducationInputs({ item, index, onChange }) {
         label="Location"
         inputID={"location_" + index}
         inputName={"location_" + index}
-        dataInputID="location"
+        dataKey="location"
         dataItemID={item.id}
         inputType="text"
         placeholder="Tingen City, Loen Kingdom"
@@ -31,7 +31,7 @@ function EducationInputs({ item, index, onChange }) {
         label="Degree"
         inputID={"degree_" + index}
         inputName={"degree_" + index}
-        dataInputID="degree"
+        dataKey="degree"
         dataItemID={item.id}
         inputType="text"
         placeholder="BS in Computer Science"
@@ -43,7 +43,7 @@ function EducationInputs({ item, index, onChange }) {
         label="Start Date"
         inputID={"startDate_" + index}
         inputName={"startDate_" + index}
-        dataInputID="startDate"
+        dataKey="startDate"
         dataItemID={item.id}
         inputType="date"
         placeholder="MM/YYYY"
@@ -55,7 +55,7 @@ function EducationInputs({ item, index, onChange }) {
         label="End Date"
         inputID={"endDate_" + index}
         inputName={"endDate_" + index}
-        dataInputID="endDate"
+        dataKey="endDate"
         dataItemID={item.id}
         inputType="date"
         placeholder="MM/YYYY"

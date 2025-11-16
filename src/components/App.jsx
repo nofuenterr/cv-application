@@ -26,11 +26,11 @@ function App() {
 
   function handleEducation(e) {
     const value = e.target.value
-    const input = e.target.dataset.input
+    const key = e.target.dataset.key
     const itemID = e.target.dataset.itemId
     const newEducation = education.map(item => {
       if (item.id === itemID) {
-        item[input] = value
+        item[key] = value
       }
       return item
     })
@@ -65,11 +65,11 @@ function App() {
 
   function handleExperience(e) {
     const value = e.target.value
-    const input = e.target.dataset.input
+    const key = e.target.dataset.key
     const itemID = e.target.dataset.itemId
     const newExperience = experience.map(item => {
       if (item.id === itemID) {
-        item[input] = value
+        item[key] = value
       }
       return item
     })

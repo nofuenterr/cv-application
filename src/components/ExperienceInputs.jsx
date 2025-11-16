@@ -7,7 +7,7 @@ function ExperienceInputs({ item, index, onChange }) {
         label="Job title"
         inputID={"jobTitle_" + index}
         inputName={"jobTitle_" + index}
-        dataInputID="jobTitle"
+        dataKey="jobTitle"
         dataItemID={item.id}
         inputType="text"
         placeholder="Red Gloves"
@@ -19,7 +19,7 @@ function ExperienceInputs({ item, index, onChange }) {
         label="Employer"
         inputID={"employer_" + index}
         inputName={"employer_" + index}
-        dataInputID="employer"
+        dataKey="employer"
         dataItemID={item.id}
         inputType="text"
         placeholder="Dunn Smith"
@@ -31,7 +31,7 @@ function ExperienceInputs({ item, index, onChange }) {
         label="Location"
         inputID={"location_" + index}
         inputName={"location_" + index}
-        dataInputID="location"
+        dataKey="location"
         dataItemID={item.id}
         inputType="text"
         placeholder="Backlund University"
@@ -43,7 +43,7 @@ function ExperienceInputs({ item, index, onChange }) {
         label="Start Date"
         inputID={"startDate_" + index}
         inputName={"startDate_" + index}
-        dataInputID="startDate"
+        dataKey="startDate"
         dataItemID={item.id}
         inputType="date"
         placeholder="MM/YYYY"
@@ -55,7 +55,7 @@ function ExperienceInputs({ item, index, onChange }) {
         label="End Date"
         inputID={"endDate_" + index}
         inputName={"endDate_" + index}
-        dataInputID="endDate"
+        dataKey="endDate"
         dataItemID={item.id}
         inputType="date"
         placeholder="MM/YYYY"

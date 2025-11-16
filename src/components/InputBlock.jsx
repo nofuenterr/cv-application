@@ -4,7 +4,7 @@ function InputBlock({
     label, 
     inputID, 
     inputName, 
-    dataInputID, 
+    dataKey, 
     dataItemID, 
     inputType, 
     placeholder, 
@@ -19,7 +19,7 @@ function InputBlock({
       <input
         id={inputID}
         name={inputName}
-        data-input={dataInputID}
+        data-key={dataKey}
         data-item-id={dataItemID}
         type={inputType}
         placeholder={placeholder}
