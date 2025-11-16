@@ -17,11 +17,21 @@ function App() {
   const [activeEducationID, setActiveEducationID] = useState(null)
   const [experience, setExperience] = useState([])
   const [activeExperienceID, setActiveExperienceID] = useState(null)
+  const [activeSections, setActiveSections] = useState(['Contacts', 'Education', 'Experience'])
 
   function handleContacts(e) {
     const id = e.target.id
     const value = e.target.value
     setContacts({ ...contacts, [id]: value })
+  }
+
+  function handleSetActiveSections(e) {
+    const section = e.target.dataset.section
+    setActiveSections(prev =>
+      prev.includes(section)
+        ? prev.filter(item => item !== section)
+        : [...prev, section]
+    );
   }
 
   function handleEducation(e) {
@@ -122,6 +132,9 @@ function App() {
         deleteExperience={deleteExperience}
         handleActiveExperienceID={handleActiveExperienceID}
         activeExperienceID={activeExperienceID}
+
+        handleSetActiveSections={handleSetActiveSections}
+        activeSections={activeSections}
       />
       <PreviewCV
         contacts={contacts}

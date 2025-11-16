@@ -1,5 +1,6 @@
 .create-cv {
   display: grid;
+  grid-auto-rows: min-content;
   gap: var(--space-10);
   padding: var(--space-12);
 }

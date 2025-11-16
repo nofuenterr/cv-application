@@ -18,7 +18,9 @@ function CreateCV({
     experienceList, 
     deleteExperience, 
     handleActiveExperienceID,
-    activeExperienceID, 
+    activeExperienceID,
+    handleSetActiveSections,
+    activeSections
   }) {
   return (
     <div className="create-cv">
@@ -26,6 +28,8 @@ function CreateCV({
         className="contacts-section"
         headline="Contacts"
         description="Add your up-to-date contact information so employers and recruiters can easily reach you."
+        onClick={handleSetActiveSections}
+        activeSections={activeSections}
       >
         <InputWrapper>
           <ContactsInputs
@@ -38,6 +42,8 @@ function CreateCV({
         className="education-section"
         headline="Education"
         description="Add your education details - even if you haven’t graduated yet."
+        onClick={handleSetActiveSections}
+        activeSections={activeSections}
       >
         <List
           section="education"
@@ -57,6 +63,8 @@ function CreateCV({
         className="experience-section"
         headline="Experience"
         description="List your work experience starting with the most recent position first."
+        onClick={handleSetActiveSections}
+        activeSections={activeSections}
       >
         <List
           section="experience"

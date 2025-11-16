@@ -1,13 +1,19 @@
+import ChevronDown from '../assets/ChevronDown'
 import '../styles/Section.css'
 
-function Section({ className, headline, description, children}) {
+function Section({ className, headline, description, onClick, activeSections, children }) {
+  const active = activeSections.includes(headline)
+
   return (
     <section className={className}>
       <div className='section-header'>
-        <h2>{headline}</h2>
-        <p>{description}</p>
+        <h2 
+          onClick={onClick} 
+          data-section={headline}
+        >{headline}<span><ChevronDown active={active}/></span></h2>
+        {active ? <p>{description}</p> : null}
       </div>
-      {children}
+      {active ? children : null}
     </section>
   )
 }
