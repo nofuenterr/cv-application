@@ -32,11 +32,13 @@
   grid-area: five;
 }
 
+
 .item .input-wrapper {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
   'one one two two'
-  'three three four five';
+  'three three four five'
+  'six six six six';
 }
 
 .item .input-wrapper > *:nth-child(1) {
@@ -57,4 +59,8 @@
 
 .item .input-wrapper > *:nth-child(5) {
   grid-area: five;
+}
+
+.item .input-wrapper > *:nth-child(6) {
+  grid-area: six;
 }

@@ -47,6 +47,7 @@ function App() {
         degree: '',
         startDate: '',
         endDate: '',
+        description: '',
       }
     )
     const newActiveID = newEducation.at(-1).id
@@ -86,6 +87,7 @@ function App() {
         location: '',
         startDate: '',
         endDate: '',
+        description: '',
       }
     )
     const newActiveID = newExperience.at(-1).id

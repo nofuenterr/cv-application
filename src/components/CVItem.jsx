@@ -19,6 +19,7 @@ function CVItem({ item }) {
       <div className="item--right">
         <p className='item--bold'>{item.employer || item.schoolName}</p>
         <p>{item.jobTitle || item.degree}</p>
+        <p>{item.description}</p>
       </div>
     </li>
   )

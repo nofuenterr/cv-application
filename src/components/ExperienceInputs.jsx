@@ -1,4 +1,5 @@
 import InputBlock from "./InputBlock"
+import TextareaBlock from "./TextareaBlock"
 
 function ExperienceInputs({ item, index, onChange }) {
   return (
@@ -14,7 +15,7 @@ function ExperienceInputs({ item, index, onChange }) {
         maxlength={50}
         onChange={onChange}
         value={item.jobTitle}
-        />
+      />
       <InputBlock
         label="Employer"
         inputID={"employer_" + index}
@@ -26,7 +27,7 @@ function ExperienceInputs({ item, index, onChange }) {
         maxlength={50}
         onChange={onChange}
         value={item.employer}
-        />
+      />
       <InputBlock
         label="Location"
         inputID={"location_" + index}
@@ -38,7 +39,7 @@ function ExperienceInputs({ item, index, onChange }) {
         maxlength={50}
         onChange={onChange}
         value={item.location}
-        />
+      />
       <InputBlock
         label="Start Date"
         inputID={"startDate_" + index}
@@ -50,7 +51,7 @@ function ExperienceInputs({ item, index, onChange }) {
         autocomplete="off"
         onChange={onChange}
         value={item.startDate}
-        />
+      />
       <InputBlock
         label="End Date"
         inputID={"endDate_" + index}
@@ -62,7 +63,17 @@ function ExperienceInputs({ item, index, onChange }) {
         autocomplete="off"
         onChange={onChange}
         value={item.endDate}
-        />
+      />
+      <TextareaBlock
+        label="Description"
+        inputID={"description_" + index}
+        inputName={"description_" + index}
+        dataKey="description"
+        dataItemID={item.id}
+        placeholder="Enter description"
+        onChange={onChange}
+        value={item.description}
+      />
     </>
   )
 }
