@@ -29,6 +29,10 @@
   font-size: 2.974722689cqi;
 }
 
+.info--bold {
+  font-weight: var(--fw-bold);
+}
+
 .cv-body {
   display: flex;
   flex-direction: column;
