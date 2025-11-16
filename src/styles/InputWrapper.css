@@ -1,9 +1,17 @@
+.contacts-section {
+  container: contacts / inline-size;
+}
+
+.item {
+  container: item / inline-size;
+}
+
 .input-wrapper {
   display: grid;
   gap: var(--space-4);
 }
 
-:not(.item) .input-wrapper {
+.contacts-section .input-wrapper {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
   'one one'
@@ -12,23 +20,23 @@
   'five five';
 }
 
-:not(.item) .input-wrapper > *:nth-child(1) {
+.contacts-section .input-wrapper > *:nth-child(1) {
   grid-area: one;
 }
 
-:not(.item) .input-wrapper > *:nth-child(2) {
+.contacts-section .input-wrapper > *:nth-child(2) {
   grid-area: two;
 }
 
-:not(.item) .input-wrapper > *:nth-child(3) {
+.contacts-section .input-wrapper > *:nth-child(3) {
   grid-area: three;
 }
 
-:not(.item) .input-wrapper > *:nth-child(4) {
+.contacts-section .input-wrapper > *:nth-child(4) {
   grid-area: four;
 }
 
-:not(.item) .input-wrapper > *:nth-child(5) {
+.contacts-section .input-wrapper > *:nth-child(5) {
   grid-area: five;
 }
 
@@ -63,4 +71,40 @@
 
 .item .input-wrapper > *:nth-child(6) {
   grid-area: six;
+}
+
+@container contacts (max-width: 19rem) {
+  .contacts-section .input-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+  }
+}
+
+@container item (max-width: 35.5rem) {
+  .item .input-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'one two'
+    'three three'
+    'four five'
+    'six six';
+  }
+}
+
+@container item (max-width: 24rem) {
+  .item .input-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six';
+  }
 }

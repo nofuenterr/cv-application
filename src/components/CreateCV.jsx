@@ -23,6 +23,7 @@ function CreateCV({
   return (
     <div className="create-cv">
       <Section
+        className="contacts-section"
         headline="Contacts"
         description="Add your up-to-date contact information so employers and recruiters can easily reach you."
       >
@@ -34,6 +35,7 @@ function CreateCV({
       </Section>
 
       <Section
+        className="education-section"
         headline="Education"
         description="Add your education details - even if you haven’t graduated yet."
       >
@@ -52,6 +54,7 @@ function CreateCV({
       </Section>
 
       <Section
+        className="experience-section"
         headline="Experience"
         description="List your work experience starting with the most recent position first."
       >
